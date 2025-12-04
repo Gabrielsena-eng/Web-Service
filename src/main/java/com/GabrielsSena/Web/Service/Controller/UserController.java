@@ -1,7 +1,7 @@
 package com.GabrielsSena.Web.Service.Controller;
 
 import com.GabrielsSena.Web.Service.Entities.User;
-import com.GabrielsSena.Web.Service.service.UserService;
+import com.GabrielsSena.Web.Service.Service.UserService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 

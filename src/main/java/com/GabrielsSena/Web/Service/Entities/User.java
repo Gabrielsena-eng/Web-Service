@@ -10,7 +10,7 @@ import java.io.Serializable;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder(toBuilder = true)
-@Table(name = "tb.user")
+@Table(name = "tb_user")
 @Entity
 @EqualsAndHashCode(of = "id")
 @ToString

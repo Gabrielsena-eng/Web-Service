@@ -1,9 +1,11 @@
-package com.GabrielsSena.Web.Service.service;
+package com.GabrielsSena.Web.Service.Service;
 
 import com.GabrielsSena.Web.Service.Entities.User;
-import com.GabrielsSena.Web.Service.repository.UserRepository;
+import com.GabrielsSena.Web.Service.Repository.UserRepository;
 import org.hibernate.type.descriptor.converter.spi.JpaAttributeConverter;
+import org.springframework.stereotype.Service;
 
+@Service
 public class UserService  {
 
     private final UserRepository repository;
@@ -16,7 +18,7 @@ public class UserService  {
         repository.saveAndFlush(user);
     }
 
-    public void deleteById (Integer id){
+    public void deleteById (Long id){
         repository.deleteById(id);
     }
 
