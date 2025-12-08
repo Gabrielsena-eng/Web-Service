@@ -2,8 +2,10 @@ package com.GabrielsSena.Web.Service.Entities;
 
 import jakarta.persistence.*;
 import lombok.*;
+import org.aspectj.weaver.ast.Or;
 
 import java.io.Serializable;
+import java.util.List;
 
 @Getter
 @Setter
@@ -32,5 +34,8 @@ public class User implements Serializable {
 
     @Column(name = "password")
     private String password;
+
+    @OneToMany(mappedBy = "user")
+    private List<Order> orders;
 
 }
