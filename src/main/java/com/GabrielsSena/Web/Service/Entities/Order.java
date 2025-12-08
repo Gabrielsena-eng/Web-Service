@@ -1,6 +1,5 @@
 package com.GabrielsSena.Web.Service.Entities;
 
-import com.GabrielsSena.Web.Service.Entities.enums.OrderItem;
 import com.GabrielsSena.Web.Service.Entities.enums.OrderStatus;
 import jakarta.persistence.*;
 import lombok.*;

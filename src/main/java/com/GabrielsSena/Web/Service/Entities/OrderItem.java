@@ -1,11 +1,7 @@
-package com.GabrielsSena.Web.Service.Entities.enums;
+package com.GabrielsSena.Web.Service.Entities;
 
-import com.GabrielsSena.Web.Service.Entities.Order;
-import com.GabrielsSena.Web.Service.Entities.Product;
 import jakarta.persistence.*;
 import lombok.*;
-
-import java.util.List;
 
 @Entity
 @Table(name = "orderItem")
