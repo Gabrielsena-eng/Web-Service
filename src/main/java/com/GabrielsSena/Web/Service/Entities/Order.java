@@ -15,7 +15,7 @@ import java.util.List;
 @Entity
 @Builder(toBuilder = true)
 @ToString
-@Table(name = "order")
+@Table(name = "tb_order")
 @EqualsAndHashCode
 
 public class Order {
