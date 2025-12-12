@@ -17,8 +17,7 @@ import java.util.Optional;
 @Repository
 public interface OrderRepository extends JpaRepository<Order, Long> {
 
-    List<Order> findByMomentBetween(Instant start, Instant end);
-    List<Order> findByUser(User user);
+    List<Order> findByMomentBetween(Instant start, Instant end);;
     List<Order> findByStatus(OrderStatus status);
 
 

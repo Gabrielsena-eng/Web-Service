@@ -5,6 +5,8 @@ import com.GabrielsSena.Web.Service.Repository.CategoryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class CategoryService {
 
@@ -20,12 +22,15 @@ public class CategoryService {
         return categoryRepository.findByName(name);
     }
 
-    public void saveCategory(Category category){
-        categoryRepository.save(category);
+    public Category saveCategory(Category category){
+       return categoryRepository.save(category);
     }
 
     public void deleteById(Long id){
         categoryRepository.deleteById(id);
     }
 
+    public List<Category> findAll(){
+        return categoryRepository.findAll();
+    }
 }

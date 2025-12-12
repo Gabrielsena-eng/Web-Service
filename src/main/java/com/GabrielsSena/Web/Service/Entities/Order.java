@@ -7,6 +7,9 @@ import lombok.*;
 import java.time.Instant;
 import java.util.List;
 
+import static org.springframework.web.servlet.function.ServerResponse.permanentRedirect;
+import static org.springframework.web.servlet.function.ServerResponse.status;
+
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
@@ -24,7 +27,7 @@ public class Order {
     private User user;
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(name = "moment")
@@ -36,6 +39,16 @@ public class Order {
     @OneToMany(mappedBy = "order")
     private List<OrderItem> items;
 
+    public Order(Long id, Instant moment, OrderStatus orderStatus, User user) {
+        super();
+        this.id = id;
+        this.moment = moment;
+        this.user = user;
+        this.status = orderStatus;
+    }
+
+    @OneToOne(mappedBy = "order", cascade = CascadeType.ALL)
+    private Payment payment;
 
 
 

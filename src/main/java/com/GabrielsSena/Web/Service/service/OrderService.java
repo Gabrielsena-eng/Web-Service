@@ -17,17 +17,24 @@ public class OrderService {
     @Autowired
     private OrderRepository orderRepository;
 
+    @Autowired
+    private UserService userService;
+
     public Order findById(Long id){
         return orderRepository.findById(id).orElseThrow(() ->
                 new RuntimeException("Pedido não encontrado"));
     }
 
-    public List<Order> findByMomentBetweet(Instant start, Instant end){
+    public List<Order> findByMomentBetween(Instant start, Instant end){
         return orderRepository.findByMomentBetween(start, end);
     }
 
-    public List<Order> findByUser(User user){
-        return orderRepository.findByUser(user);
+    public List<Order> findByUserId(Long userId){
+        User user = userService.findById(userId);
+        List<Order> orders = orderRepository.findAll().
+                stream().filter(x -> x.getUser() == user).toList();
+
+        return orders;
     }
 
     public void saveOrder(Order order){

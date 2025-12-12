@@ -20,6 +20,9 @@ public class OrderItemService {
     private OrderItemRepository itemRepository;
 
     @Autowired
+    private OrderRepository orderRepository;
+
+    @Autowired
     private ProductService productService;
 
     public OrderItem findById(Long id){
@@ -27,8 +30,11 @@ public class OrderItemService {
                 new RuntimeException("OrderItem not found"));
     }
 
-    public List<OrderItem> findByOrder(Order order){
-        return itemRepository.findByOrder(order);
+    public List<OrderItem> findByOrderId(Long orderId){
+        Order order = orderRepository.findById(orderId).orElseThrow(() ->
+                new RuntimeException("Order item not Found"));
+        List<OrderItem> list = itemRepository.findAll().stream().filter(x -> x.getOrder() == order).toList();
+        return list;
     }
 
     public OrderItem replaceProductInOrderItem(Long orderItemId, Long productId){
