@@ -1,7 +1,7 @@
 package com.GabrielsSena.Web.Service.Service;
 
 import com.GabrielsSena.Web.Service.Entities.Payment;
-import com.GabrielsSena.Web.Service.Repository.PaymentRepository;
+import com.GabrielsSena.Web.Service.repository.PaymentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

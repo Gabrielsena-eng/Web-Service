@@ -1,7 +1,8 @@
 package com.GabrielsSena.Web.Service.Service;
 
 import com.GabrielsSena.Web.Service.Entities.Category;
-import com.GabrielsSena.Web.Service.Repository.CategoryRepository;
+
+import com.GabrielsSena.Web.Service.repository.CategoryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

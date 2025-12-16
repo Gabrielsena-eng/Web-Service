@@ -2,7 +2,7 @@ package com.GabrielsSena.Web.Service;
 
 import com.GabrielsSena.Web.Service.Entities.*;
 import com.GabrielsSena.Web.Service.Entities.enums.OrderStatus;
-import com.GabrielsSena.Web.Service.Repository.*;
+import com.GabrielsSena.Web.Service.repository.*;
 import com.GabrielsSena.Web.Service.Service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -61,12 +61,7 @@ public class TestConfig implements CommandLineRunner {
         userRepository.saveAll(Arrays.asList(u1, u2));
         orderRepository.saveAll(Arrays.asList(o1, o2, o3));
 
-        OrderItem oi1 = new OrderItem( null, p1.getPrice(), o1, p1);
-        OrderItem oi2 = new OrderItem(null, p2.getPrice(), o2, p2);
-        OrderItem oi3 = new OrderItem(null, p3.getPrice(), o1, p3);
-        OrderItem oi4 = new OrderItem(null, p2.getPrice(), o3, p2);
 
-        orderItemRepository.saveAll(Arrays.asList(oi1, oi2, oi3, oi4));
 
         Payment pay1 = new Payment(null, Instant.parse("2019-06-20T21:53:07Z"), o1);
         o1.setPayment(pay1);

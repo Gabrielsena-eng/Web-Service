@@ -1,7 +1,7 @@
 package com.GabrielsSena.Web.Service.Service;
 
 import com.GabrielsSena.Web.Service.Entities.User;
-import com.GabrielsSena.Web.Service.Repository.UserRepository;
+import com.GabrielsSena.Web.Service.repository.UserRepository;
 import org.hibernate.type.descriptor.converter.spi.JpaAttributeConverter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

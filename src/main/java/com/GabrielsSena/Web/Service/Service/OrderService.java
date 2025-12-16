@@ -3,8 +3,7 @@ package com.GabrielsSena.Web.Service.Service;
 import com.GabrielsSena.Web.Service.Entities.Order;
 import com.GabrielsSena.Web.Service.Entities.User;
 import com.GabrielsSena.Web.Service.Entities.enums.OrderStatus;
-import com.GabrielsSena.Web.Service.Repository.OrderRepository;
-import jakarta.transaction.Transactional;
+import com.GabrielsSena.Web.Service.repository.OrderRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

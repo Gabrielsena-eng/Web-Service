@@ -1,4 +1,4 @@
-package com.GabrielsSena.Web.Service.Repository;
+package com.GabrielsSena.Web.Service.repository;
 
 import com.GabrielsSena.Web.Service.Entities.Order;
 import com.GabrielsSena.Web.Service.Entities.User;

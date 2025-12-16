@@ -5,8 +5,8 @@ import com.GabrielsSena.Web.Service.Entities.OrderItem;
 import com.GabrielsSena.Web.Service.Entities.Product;
 import com.GabrielsSena.Web.Service.Entities.User;
 import com.GabrielsSena.Web.Service.Entities.enums.OrderStatus;
-import com.GabrielsSena.Web.Service.Repository.OrderItemRepository;
-import com.GabrielsSena.Web.Service.Repository.OrderRepository;
+import com.GabrielsSena.Web.Service.repository.OrderItemRepository;
+import com.GabrielsSena.Web.Service.repository.OrderRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
