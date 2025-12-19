@@ -4,11 +4,12 @@ Este é um projeto de Web-Service para gerenciamento de pedidos, focado em opera
 
 ## 🚀 Tecnologias Utilizadas
 
-<img src="imagens/PNG%20java.png?" width="40"  alt="Linguagem Java">
-<img src="imagens/PNG MySQL.png" width=40 > 
+<p align="center">
+<img src="imagens/PNG%20java.png?" width="40">
+<img src="imagens/PNG MySQL.png" width=40 >
 <img src="imagens/PNG Postman.png" width=55 height=30>
 <img src="imagens/PNG Springboot.png" width=55 height=35>
-
+<p/>
 
 * **Java 17** & **Spring Boot**
 * **JPA / Hibernate**: Para Mapeamento Objeto-Relacional e persistência.
