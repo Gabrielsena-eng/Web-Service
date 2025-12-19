@@ -27,6 +27,8 @@ public class PaymentService {
         paymentRepository.save(payment);
     }
 
+
+    //pegar lista de pagamentos em um periodo
     public List<Payment> findByMomentBetween(Instant start, Instant end){
        return paymentRepository.findByMomentBetween(start, end);
     }
