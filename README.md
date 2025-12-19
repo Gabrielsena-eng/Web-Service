@@ -39,13 +39,11 @@ O projeto foi estruturado para solidificar conceitos de requisições HTTP e pad
 
 1. **Pré-requisitos**: Possuir o JDK 17+ e o MySQL instalados.
 2. **Clone o repositório**:
-   ```bash
-   git clone [https://github.com/seu-usuario/seu-repositorio.git](https://github.com/seu-usuario/seu-repositorio.git)
-Configuração do Banco:
+
 
 Ajuste as credenciais no arquivo src/main/resources/application.properties:
 
-Properties
+Properties:
 
-spring.datasource.username=seu_usuario
+spring.datasource.username=seu_usuario <br>
 spring.datasource.password=sua_senha
